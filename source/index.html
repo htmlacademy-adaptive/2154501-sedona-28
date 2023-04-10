@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
   </head>
-  <body>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="#">
+        <img width="185" height="96" src="img/logo.svg" alt="Логотип Седона.">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Фото и видео
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                Форма Отзыва
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+          <div class="main-nav__list user-list">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+      <nav class="main-header__menu menu">
+        <button class="menu__button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--current" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Фото и видео</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Форма Отзыва</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">HTML ACADEMY</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
   </body>
 </html>
