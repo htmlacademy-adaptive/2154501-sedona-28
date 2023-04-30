@@ -1,11 +1,32 @@
 .main__hero {
   position: relative;
   box-sizing: border-box;
-  background-color: @bg-middle;
+  background-color: #d7e3ed;
   background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom -0.2px, center;
   background-size: auto, cover;
   padding: 90px 19px 85px;
   object-fit: cover;
+  color: #ffffff;
+
+  @media (min-width: @tablet) {
+    padding: 77px 100px 91px;
+    background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
+  }
+
+  @media (min-width: @desktop) {
+    background-size: contain, cover;
+    padding: 78px 100px 90px;
+    background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
+  }
+}
+
+.hero-img {
+  @media (min-width: @tablet) {
+    display: block;
+    width: 461px;
+    height: 350px;
+    margin: 0 auto;
+  }
 }
