@@ -2,7 +2,7 @@
   position: relative;
   box-sizing: border-box;
   background-color: #d7e3ed;
-  background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
+  background-image: url("../img/devider.svg"), url("../img/back-mobile.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom -0.2px, center;
   background-size: auto, cover;
@@ -10,9 +10,17 @@
   object-fit: cover;
   color: #ffffff;
 
+  @media (min-resolution: 2dppx) and (max-width: @tablet) {
+    background-image: url("../img/devider..svg"), url("../img/back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet) {
     padding: 77px 100px 91px;
-    background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
+    background-image: url("../img/devider.svg"), url("../img/back-tablet.jpg");
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: @tablet) {
+    background-image: url("../img/devider.svg"), url("../img/back-mobile@2x.jp");
   }
 
   @media (min-width: @desktop) {
@@ -20,6 +28,10 @@
     padding: 78px 100px 90px;
     background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
   }
+}
+
+@media (min-resolution: 2dppx) and (min-width: @desktop) {
+  background-image: url("../img/devider.svg"), url("../img/back-desktop@2x.jpg");
 }
 
 .hero-img {
