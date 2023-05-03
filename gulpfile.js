@@ -37,6 +37,18 @@ const sctipt = () => {
     .pipe(browser.stream());
 }
 
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    'source/fonts/*.*',
+    'source/img/favicon/*.png',
+    'source/manifest.webmanifest',
+    'source/favicon.ico'
+  ], { base: 'source' })
+    .pipe(gulp.dest('build'))
+}
+
 // Server
 
 const server = (done) => {
