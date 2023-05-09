@@ -4,7 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
-
+import svgSprite from 'gulp-svg-sprite';
 
 // Styles
 
@@ -74,3 +74,17 @@ const watcher = () => {
 export default gulp.series(
   styles, server, watcher
 );
+
+// SVG
+
+export const sprite = () => {
+  return gulp.src('source/img/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: '../stack.svg'
+        }
+      }
+    }))
+    .pipe(gulp.dest('source/img/'))
+}
