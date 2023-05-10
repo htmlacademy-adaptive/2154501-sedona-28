@@ -49,8 +49,10 @@
       </section>
       <section class="main__advantages advantages container">
         <h2 class="visually-hidden">Преимущества</h2>
-        <p class="advantages__title title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</p>
-        <p class="advantages__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div class="advantages__header">
+          <p class="advantages__title title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</p>
+          <p class="advantages__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--blue">
             <div class="advantages__wrapper advantages__wrapper--first ">
@@ -59,9 +61,12 @@
               <p class="advantages__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <picture class="advantages__picture advantages__picture--right">
+              <source media="(min-width: 1200px)" srcset="img/index/photo-city__desktop.webp 1x, img/index/photo-city__desktop@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1200px)" srcset="img/index/photo-city__desktop.jpg 1x, img/index/photo-city__desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/index/photo-city__tablet.webp 1x, img/index/photo-city__tablet@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/index/photo-city__tablet.jpg 1x, img/index/photo-city__tablet@2x.jpg 2x">
-              <img class="advantages__photo advantages__photo--right-image" src="img/index/photo-city__mobile.jpg" srcset="img/index/photo-city__mobile@2x.jpg 2x" width="520" height="260" alt="Дом в Седоне.">
+              <source srcset="img/index/photo-city__mobile.webp 1x, img/index/photo-city__tablet@2x.jpg 2x">
+              <img class="advantages__photo advantages__photo--right-image" src="img/index/photo-city__mobile.jpg" srcset="img/index/photo-city__mobile@2x.jpg 2x" width="320" height="260" alt="Дом в Седоне.">
             </picture>
             <ul class="advantages__features features">
               <li class="features__item features__item--house">
@@ -85,9 +90,12 @@
               <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture class="advantages__picture advantages__picture--left">
+              <source media="(min-width: 1200px)" srcset="img/index/photo-bridge__desktop.webp 1x, img/index/photo-bridge__desktop@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1200px)" srcset="img/index/photo-bridge__desktop.jpg 1x, img/index/photo-bridge__desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/index/photo-bridge__tablet.webp 1x, img/index/photo-bridge__tablet@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/index/photo-bridge__tablet.jpg 1x, img/index/photo-bridge__tablet@2x.jpg 2x">
-              <img class="advantages__photo advantages__photo--left-image" src="img/index/photo-bridge__mobile.jpg" srcset="img/index/photo-bridge__mobile@2x.jpg 2x" width="520" height="260" alt="Мост в Седоне.">
+              <source srcset="img/index/photo-bridge__mobile.webp 1x, img/index/photo-bridge__mobile@2x.webp 2x" type="image/webp">
+              <img class="advantages__photo advantages__photo--left-image" src="img/index/photo-bridge__mobile.jpg" srcset="img/index/photo-bridge__mobile@2x.jpg 2x" width="320" height="260" alt="Мост в Седоне.">
             </picture>
           </li>
           <li class="advantages__item advantages__item--small-wrapper advantages__item--grey">
