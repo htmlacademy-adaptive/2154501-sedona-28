@@ -88,13 +88,11 @@ const sprite = () => {
     .pipe(gulp.dest('source/img/'))
 }
 
-
 // Clean
 
 const clean = () => {
   return del('build')
 }
-
 
 // Copy
 
@@ -165,4 +163,3 @@ const start = gulp.series(
 
 gulp.task('build', build)
 gulp.task('default', start)
-
