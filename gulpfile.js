@@ -52,7 +52,7 @@ const script = () => {
 
 // Image
 
-const optimiseImage = () => {
+export const optimiseImage = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicon/*.png'])
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
@@ -60,12 +60,12 @@ const optimiseImage = () => {
 
 // WebP
 
-const createWebp = () => {
+export const createWebp = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicon/*.png'])
     .pipe(squoosh({
       webp: {}
     }))
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('source/img'))
 }
 
 // SVG
@@ -100,7 +100,7 @@ const clean = () => {
 const copy = () => {
   return gulp.src([
     'source/fonts/*.*',
-    'source/img/favicon/*.png',
+    'source/img/**/*.{png,jpg,svg,webp}',
     'source/manifest.webmanifest',
     'source/favicon.ico'
   ], { base: 'source' })
@@ -153,10 +153,6 @@ const start = gulp.series(
     html,
     styles,
     script,
-    optimiseImage,
-    createWebp,
-    svg,
-    sprite,
     copy
   ),
   server
