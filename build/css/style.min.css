@@ -902,4 +902,19 @@
     width: 100%;
   }
 }
+.view-box {
+  width: 284px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .view-box {
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .view-box {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.min.css.map */
