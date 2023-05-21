@@ -5,7 +5,6 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import svgSprite from 'gulp-svg-sprite';
-import notify from 'gulp-notify';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
@@ -13,10 +12,6 @@ import squoosh from 'gulp-libsquoosh';
 import del from 'del';
 import terser from 'gulp-terser';
 import svgmin from 'gulp-svgmin';
-import groupCssMediaQueries from 'gulp-group-css-media-queries';
-import postcssScss from 'postcss-scss';
-import postcssUrl from 'postcss-url';
-import postcssImport from 'postcss-import';
 
 // Styles
 
@@ -25,7 +20,8 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
@@ -55,7 +51,7 @@ const script = () => {
 export const optimiseImage = () => {
   return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicon/*.png'])
     .pipe(squoosh())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('source/img'))
 }
 
 // WebP
@@ -110,12 +106,10 @@ const copy = () => {
 // Server
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', styles);
+  gulp.watch('source/less/**/*.less', styles);
   gulp.watch('build/css/*.css').on('change', browser.reload);
-  gulp.watch('source/js/*.js', script);
-  gulp.watch('build/js/*.js').on('change', browser.reload);
-  gulp.watch('source/*.html').on('change', html);
-  gulp.watch('build/*.html').on('change', browser.reload);
+  gulp.watch('source/js/*.js', script).on('change', browser.reload);
+  gulp.watch('source/*.html', html).on('change', browser.reload);
 }
 
 const server = (done) => {
@@ -139,10 +133,6 @@ const build = gulp.series(
     html,
     styles,
     script,
-    optimiseImage,
-    createWebp,
-    svg,
-    sprite,
     copy
   )
 )
