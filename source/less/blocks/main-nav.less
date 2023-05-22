@@ -15,3 +15,18 @@
     display: none;
   }
 }
+
+@media (max-width: @tablet) {
+  .nojs {
+    & .main-nav {
+      position: static;
+      margin-top: 110px;
+    }
+
+    & .main-nav__list {
+      display: block;
+      position: static;
+      width: 100%;
+    }
+  }
+}

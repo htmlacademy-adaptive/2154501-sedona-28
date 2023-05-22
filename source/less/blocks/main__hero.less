@@ -1,8 +1,15 @@
+/* stylelint-disable  */
 .main__hero {
   position: relative;
   box-sizing: border-box;
   background-color: #d7e3ed;
   background-image: url("../img/devider.svg"), url("../img/back-mobile.jpg");
+  background-image: url("../../img/devider.svg"), image-set(
+      url("../img/back-mobile.webp") 1x type("image/webp"),
+      url("../img/back-mobile.jpg") 1x,
+      url("../img/back-mobile@2x.webp") 2x type("image/webp"),
+      url("../img/back-mobile@2x.jpg") 2x
+  );
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom -0.2px, center;
   background-size: auto, cover;
@@ -42,3 +49,4 @@
     margin: 0 auto;
   }
 }
+/* stylelint-enable  */
