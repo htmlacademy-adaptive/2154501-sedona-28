@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="./img/favicon/apple.png">
+    <link rel="apple-touch-icon" href="img/favicon/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
@@ -43,6 +43,7 @@
 
       </nav>
     </header>
+
     <main class="main-container main container">
       <section class="main__hero hero">
         <h1 class="visually-hidden">Галерея фотографий Седоны</h1>
@@ -66,6 +67,7 @@
                 <source srcset="img/media/mobile/photo-1-mobile.webp 1x, img/media/mobile/photo-1-mobile@2x.webp 2x" type="image/webp">
                 <img class="gallery-item__photo gallery-item__photo--big-photo" src="img/media/mobile/photo-1-mobile.jpg" srcset="img/media/mobile/photo-1-mobile@2x.jpg 2x" alt="Дорога на закате.">
               </picture>
+
             </a>
             <div class="gallery-item__wrapper">
               <div class="gallery-item__text-wrapper">
@@ -146,6 +148,27 @@
         </ul>
       </section>
 
+      <section class="video-block">
+        <h2 class="visually-hidden">Видео</h2>
+        <div class="video-block__text-wrapper">
+          <h3 class="video-block__title">Все еще сомневаетесь?</h3>
+          <p class="video-block__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+        <div class="video-block__video video">
+          <a class="video__link" href="https://www.youtube.com/watch?v=nmVEjx1DCqk" target="_blank">
+            <span class="visually-hidden">Видео</span>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/media/video/video-desktop.webp 1x, img/media/video/video-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)" srcset="img/media/video/video-desktop.jpg 1x, img/media/video/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/media/video/video-tablet.webp 1x, img/media/video/video-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/media/video/video-tablet.jpg 1x, img/media/video/video-tablet@2x.jpg 2x">
+              <source srcset="img/media/video/video-mobile.webp 1x, img/media/video/video-mobile@2x.webp 2x" type="image/webp">
+              <img class="video__img" src="img/media/video/video-mobile.jpg" srcset="img/media/video/video-mobile@2x.jpg 2x" alt="">
+            </picture>
+            <span class="video__play"></span>
+          </a>
+        </div>
+      </section>
 
 
     </main>

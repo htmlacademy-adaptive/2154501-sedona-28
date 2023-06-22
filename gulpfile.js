@@ -66,13 +66,13 @@ export const createWebp = () => {
 
 // SVG
 
-const svg = () => {
+export const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/svg'])
     .pipe(svgmin())
     .pipe(gulp.dest('build/img'))
 }
 
-const sprite = () => {
+export const sprite = () => {
   return gulp.src('source/img/svg/*.svg')
     .pipe(svgSprite({
       mode: {
