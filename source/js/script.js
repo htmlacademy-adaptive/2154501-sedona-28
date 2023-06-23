@@ -8,14 +8,14 @@ const onMenuButtonClick = () => {
 
 const loadJavaScript = () => {
   const nojs = document.querySelector('.nojs');
-  const nojsHeader = document.querySelector('.nojs__header');
-  const nojsNavigationButton = document.querySelector('.nojs__toggle');
-  const nojsNavigationList = document.querySelector('.nojs__main-nav');
+  const nojsMap = document.querySelector('.nojs__map');
+  const map = document.querySelector('.map');
 
   nojs.classList.remove('nojs');
-  nojsHeader.classList.remove('nojs__header');
-  nojsNavigationButton.classList.remove('nojs__toggle');
-  nojsNavigationList.classList.remove('nojs__main-nav');
+  if (map && nojsMap) {
+    nojsMap.remove();
+    map.style.display = 'block';
+  }
 };
 
 loadJavaScript();

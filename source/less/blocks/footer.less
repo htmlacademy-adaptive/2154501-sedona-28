@@ -6,6 +6,12 @@
   color: #000000;
   box-sizing: border-box;
 
+  @media (max-width: 767px) {
+    &--index {
+      padding: 42px 20px;
+    }
+  }
+
   & > *:not(:last-child) {
     margin-bottom: 29px;
 
@@ -42,6 +48,10 @@
   display: block;
   margin: 0 auto;
   width: fit-content;
+
+  &:hover {
+    color: rgba(129, 179, 210, 1);
+  }
 }
 
 .footer__social-list {

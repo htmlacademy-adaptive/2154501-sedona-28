@@ -1,8 +1,15 @@
+/* stylelint-disable  */
 .main__hero {
   position: relative;
   box-sizing: border-box;
   background-color: #d7e3ed;
   background-image: url("../img/devider.svg"), url("../img/back-mobile.jpg");
+  background-image: url("../img/devider.svg"), image-set(
+      url("../img/back-mobile.webp") 1x type("image/webp"),
+      url("../img/back-mobile.jpg") 1x,
+      url("../img/back-mobile@2x.webp") 2x type("image/webp"),
+      url("../img/back-mobile@2x.jpg") 2x
+  );
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom -0.2px, center;
   background-size: auto, cover;
@@ -10,27 +17,31 @@
   object-fit: cover;
   color: #ffffff;
 
-  @media (min-resolution: 2dppx) and (max-width: @tablet) {
-    background-image: url("../img/devider.svg"), url("../img/back-mobile@2x.jpg");
-  }
-
   @media (min-width: @tablet) {
     padding: 77px 100px 91px;
     background-image: url("../img/devider.svg"), url("../img/back-tablet.jpg");
-  }
-
-  @media (min-resolution: 2dppx) and (min-width: @tablet) {
-    background-image: url("../img/devider.svg"), url("../img/back-tablet@2x.jpg");
+    background-image: url("../img/devider.svg"), image-set(
+      url("../img/back-tablet.webp") 1x type("image/webp"),
+      url("../img/back-tablet.jpg") 1x,
+      url("../img/back-tablet@2x.webp") 2x type("image/webp"),
+      url("../img/back-tablet@2x.jpg") 2x
+    );
   }
 
   @media (min-width: @desktop) {
     background-size: contain, cover;
     padding: 78px 100px 90px;
     background-image: url("../img/devider.svg"), url("../img/back-desktop.jpg");
+    background-image: url("../img/devider.svg"), image-set(
+      url("../img/back-desktop.webp") 1x type("image/webp"),
+      url("../img/back-desktop.jpg") 1x,
+      url("../img/back-desktop@2x.webp") 2x type("image/webp"),
+      url("../img/back-desktop@2x.jpg") 2x
+    );
   }
 
-  @media (min-resolution: 2dppx) and (min-width: @desktop) {
-    background-image: url("../img/devider.svg"), url("../img/back-desktop@2x.jpg");
+  &:only-child:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
@@ -41,4 +52,21 @@
     height: 350px;
     margin: 0 auto;
   }
+
+  &--not-index {
+    width: 229px;
+    height: 39px;
+    object-fit: cover;
+
+    @media (min-width: @tablet) {
+      width: 462px;
+      height: 78px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 460px;
+      height: 80px;
+    }
+  }
 }
+/* stylelint-enable  */
