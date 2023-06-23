@@ -133,6 +133,10 @@ const build = gulp.series(
     html,
     styles,
     script,
+    optimiseImage,
+    createWebp,
+    svg,
+    sprite,
     copy
   )
 )
@@ -143,6 +147,10 @@ const start = gulp.series(
     html,
     styles,
     script,
+    optimiseImage,
+    createWebp,
+    svg,
+    sprite,
     copy
   ),
   server
